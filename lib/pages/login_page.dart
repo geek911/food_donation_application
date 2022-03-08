@@ -3,6 +3,11 @@ import 'package:food_donation_application/commons/custom_buttons.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  void _register(){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +25,7 @@ class LoginPage extends StatelessWidget {
             const Text(
               "Email",
               textAlign: TextAlign.start,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 8,
@@ -36,7 +41,7 @@ class LoginPage extends StatelessWidget {
             const Text(
               "Password",
               textAlign: TextAlign.start,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 8,
