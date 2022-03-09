@@ -1,11 +1,15 @@
 import "package:flutter/material.dart";
 import 'package:food_donation_application/commons/custom_buttons.dart';
+import 'package:food_donation_application/pages/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
-  void _register(){
-
+  void _register(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const RegisterPage()),
+    );
   }
 
   @override
@@ -64,9 +68,10 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               child: const Text("Register"),
-              onPressed: () {},
+              onPressed: () {
+                _register(context);
+              },
             ),
-
           ],
         ),
       ),
