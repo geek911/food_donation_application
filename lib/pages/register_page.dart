@@ -7,7 +7,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Donor Registration"),
+        title: const Text("Registration"),
         centerTitle: true,
       ),
       body: Container(
