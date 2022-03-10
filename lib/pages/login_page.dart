@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:food_donation_application/commons/custom_buttons.dart';
+import 'package:food_donation_application/pages/donor_page.dart';
 import 'package:food_donation_application/pages/register_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -8,8 +9,13 @@ class LoginPage extends StatelessWidget {
   void _register(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const RegisterPage()),
+      MaterialPageRoute(builder: (context) => RegisterPage()),
     );
+  }
+
+  void _login(BuildContext context) {
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (BuildContext context) => DashboardPage()));
   }
 
   @override
@@ -60,7 +66,9 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               child: const Text("Login"),
-              onPressed: () {},
+              onPressed: () {
+                _login(context);
+              },
             ),
             const Text(
               "OR",

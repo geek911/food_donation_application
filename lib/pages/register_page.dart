@@ -1,7 +1,10 @@
 import "package:flutter/material.dart";
+import 'package:food_donation_application/model/user.dart';
+import 'package:food_donation_application/services/authentication_service.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  RegisterPage({Key? key}) : super(key: key);
+  AuthenticationService _service = AuthenticationService();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,11 @@ class RegisterPage extends StatelessWidget {
             _buildField("Phone Number"),
             _buildField("Password"),
             _buildField("Confirm Password"),
-            ElevatedButton(onPressed: () {}, child: const Text('Register'))
+            ElevatedButton(
+                onPressed: () async {
+                  Navigator.pop(context);
+                },
+                child: const Text('Register'))
           ],
         ),
       ),
